@@ -1,0 +1,26 @@
+[
+  {
+    "eventId": "5011d371-641b-431a-bede-af2f8eddf5ae",
+    "eventName": "Java Monthly Meetup",
+    "description": "This is the group's monthly meetup",
+    "date": 1579654800,
+    "language": ["Java"],
+    "technology": ["Java","Enterprise"]
+  },
+  {
+    "eventId": "b34629ed-c418-4dfa-a319-deb5acf840b5",
+    "eventName": "Mobile Developers Meetup",
+    "description": "This is the group's monthly meetup",
+    "date": 1579741200,
+    "language": ["Swift","Java","Javascript"],
+    "technology": ["Mobile","iOS","Android"]
+  },
+  {
+    "eventId": "71e8a2a5-e410-473a-bcde-48f4ef99c2a5",
+    "eventName": "JSConf 2020",
+    "description": "Conference for Javascript developers",
+    "date": 1579827600,
+    "language": ["Javascript"],
+    "technology": ["Web","Cloud"]
+  }
+]

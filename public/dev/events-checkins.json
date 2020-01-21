@@ -1,0 +1,22 @@
+[
+  {
+    "eventName": "Java Monthly Meetup",
+    "checkIns":74
+  },
+  {
+    "eventName": "Mobile Developers Meetup",
+    "checkIns":28
+  },
+  {
+    "eventName": "JSConf 2020",
+    "checkIns": 45
+  },
+  {
+    "eventName": "DevOps Meetup",
+    "checkIns": 32
+  },
+  {
+    "eventName": "MongoDB Developers",
+    "checkIns": 55
+  }
+]
