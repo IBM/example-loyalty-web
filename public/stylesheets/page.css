@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+  background-color: rgb(245, 245, 245);
+}
+
+.app-bar-row {
+  background-color: rgb(245, 245, 245);
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.drawer-header {
+  background-color: rgb(55, 71, 79);
+}
+
+.drawer-content {
+  background-color: rgb(55, 71, 79);
+}
+
+.drawer-options {
+  color: rgb(236, 239, 241);
+}
+
+.mdc-list-item--activated {
+  background-color: rgba(245, 245, 245, 0.34);
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+.main-content {
+  padding: 15px;
+}
+
+.app-bar {
+  position: absolute;
+}

@@ -9,20 +9,21 @@ getEvents(function (events) {
 
 
 function addToListOfEvents(event) {
-  let eventDiv = document.createElement('li')
+  let eventLi = document.createElement('li')
   let span = document.createElement('span')
   let eventNameSpan = document.createElement('span')
   let eventDescriptionSpan = document.createElement('span')
-  eventDiv.className = "mdl-list__item mdl-list__item--two-line"
-  span.className = "mdl-list__item-primary-content"
-  eventDescriptionSpan.className = "mdl-list__item-sub-title"
+  eventLi.className = "mdc-list-item"
+  span.className = "mdc-list-item__text"
+  eventNameSpan.className = "mdc-list-item__primary-text"
+  eventDescriptionSpan.className = "mdc-list-item__secondary-text"
 
   eventNameSpan.innerHTML = event.eventName
   eventDescriptionSpan.innerHTML = event.description
 
   span.appendChild(eventNameSpan)
   span.appendChild(eventDescriptionSpan)
-  eventDiv.appendChild(span)
+  eventLi.appendChild(span)
 
-  listOfEventsDiv.appendChild(eventDiv)
+  listOfEventsDiv.appendChild(eventLi)
 }

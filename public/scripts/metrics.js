@@ -4,6 +4,16 @@ var metricsGroupedByLanguageDiv = document.getElementById('metrics-grouped-by-la
 google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(drawChart);
 
+const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
+list.wrapFocus = true;
+
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(topAppBarElement);
+// topAppBar.setScrollTarget(document.getElementById('main-content'));
+// topAppBar.listen('MDCTopAppBar:nav', () => {
+//   drawer.open = !drawer.open;
+// });
+
 function drawChart() {
 
   getAllEventsCheckins(function (events) {

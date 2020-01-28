@@ -7,36 +7,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/page.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-red.min.css">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
-  <!-- Header -->
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">List of Events</span>
+  <aside class="mdc-drawer mdc-elevation--z1">
+    <div class="drawer-header mdc-drawer__header">
+      <h3 class="mdc-drawer__title" style="color: rgb(236, 239, 241);">Example Loyalty</h3>
     </div>
-  </header>
+    <div class="drawer-content mdc-drawer__content">
+      <div class="mdc-list">
+        <a class="mdc-list-item" href="/" aria-current="page">
+          <!-- <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i> -->
+          <span class="drawer-options mdc-list-item__text">Home</span>
+        </a>
+        <a class="mdc-list-item mdc-list-item--activated" href="events.html">
+          <!-- <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i> -->
+          <span class="drawer-options mdc-list-item__text">Events</span>
+        </a>
+        <a class="mdc-list-item" href="metrics.html">
+          <!-- <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i> -->
+          <span class=" drawer-options mdc-list-item__text">Metrics</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <!-- <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i> -->
+          <span class="drawer-options mdc-list-item__text">Transactions</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <!-- <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i> -->
+          <span class="drawer-options mdc-list-item__text">About</span>
+        </a>
+      </div>
+    </div>
+  </aside>
 
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Example Health</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="index.html">Home</a>
-      <a class="mdl-navigation__link" href="events.html">Events</a>
-      <a class="mdl-navigation__link" href="metrics.html">Metrics</a>
-      <a class="mdl-navigation__link" href="index.html">Transactions</a>
-      <a class="mdl-navigation__link" href="index.html">About</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div>
-      <ul id="list-of-events" class="mdl-list">
-      </ul>
-    </div>
-  </main>
+  <div class="mdc-drawer-app-content">
+    <header class="mdc-top-app-bar app-bar mdc-elevation--z1" id="app-bar">
+      <div class="app-bar-row mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <span class="mdc-top-app-bar__title">Dashboard</span>
+        </section>
+      </div>
+    </header>
+
+
+    <main class="main-content" id="main-content">
+      <div class="mdc-top-app-bar--fixed-adjust">
+        <div>
+          <ul id="list-of-events" class="mdc-list mdc-list--two-line">
+          </ul>
+        </div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
