@@ -1,0 +1,23 @@
+.subheader-data-table {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin-bottom: -5px;
+}
+
+.mdc-data-table__header-cell {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#recent-users-who-checked-in {
+  margin-top: 10px;
+}
+
+#users-marked-for-deletion {
+  margin-top: 10px;
+}
+
+.button-item {
+  margin-left: 10px;
+}

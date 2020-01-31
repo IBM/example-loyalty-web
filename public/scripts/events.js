@@ -1,11 +1,11 @@
 var listOfEventsDiv = document.getElementById('list-of-events')
 
-getEvents(function (events) {
-  for (index in events) {
-    let event = events[index]
-    addToListOfEvents(event)
-  }
-})
+// getEvents(function (events) {
+//   for (index in events) {
+//     let event = events[index]
+//     addToListOfEvents(event)
+//   }
+// })
 
 
 function addToListOfEvents(event) {
