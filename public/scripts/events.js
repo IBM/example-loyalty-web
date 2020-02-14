@@ -1,29 +1,57 @@
-var listOfEventsDiv = document.getElementById('list-of-events')
 
-// getEvents(function (events) {
-//   for (index in events) {
-//     let event = events[index]
-//     addToListOfEvents(event)
-//   }
-// })
 
+function getEventsClient() {
+  console.log("Getting event data.");
+  var all_events = "http://localhost:8080/events"
+  
+  axios.get(all_events,{}).then((response) => {
+    console.log("Client: Received data from event service.");
+    console.log(response);
+    addEvents(response.data);
+  }).catch(err => {
+    console.log(err);
+  });
+}
+
+function addEvents(event_list) {
+  for (index in event_list) {
+    let event = event_list[index]
+    addToListOfEvents(event)
+  }
+}
 
 function addToListOfEvents(event) {
-  let eventLi = document.createElement('li')
-  let span = document.createElement('span')
-  let eventNameSpan = document.createElement('span')
-  let eventDescriptionSpan = document.createElement('span')
-  eventLi.className = "mdc-list-item"
-  span.className = "mdc-list-item__text"
-  eventNameSpan.className = "mdc-list-item__primary-text"
-  eventDescriptionSpan.className = "mdc-list-item__secondary-text"
+  console.log("Adding event: " + event.eventId);
 
-  eventNameSpan.innerHTML = event.eventName
-  eventDescriptionSpan.innerHTML = event.description
+  // list of event columns
+  // | event_id     |   point_value |   event_name |   location |   start_time |   end_time |   description |
 
-  span.appendChild(eventNameSpan)
-  span.appendChild(eventDescriptionSpan)
-  eventLi.appendChild(span)
+  var listBody = document.getElementById('event_list_body')
+  let eventRow = document.createElement('tr');
+  eventRow.className = "mdc-data-table__row";
 
-  listOfEventsDiv.appendChild(eventLi)
+  let eventName = document.createElement('td');
+  eventName.className = "mdc-data-table__cell";
+  eventName.innerHTML = event.eventName;
+
+  let eventLoc = document.createElement('td');
+  eventLoc.className = "mdc-data-table__cell";
+  eventLoc.innerHTML = event.eventLocation;
+
+  let eventPoints = document.createElement('td');
+  eventPoints.className = "mdc-data-table__cell mdc-data-table__cell--numeric";
+  eventPoints.innerHTML = event.pointValue;
+
+  let eventDesc = document.createElement('td');
+  eventDesc.className = "mdc-data-table__cell";
+  eventDesc.innerHTML = event.eventDescription;
+  
+
+  eventRow.appendChild(eventName);
+  eventRow.appendChild(eventLoc);
+  eventRow.appendChild(eventPoints);
+  eventRow.appendChild(eventDesc);
+
+  listBody.appendChild(eventRow);
 }
+

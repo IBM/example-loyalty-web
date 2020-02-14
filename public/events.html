@@ -11,6 +11,8 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="stylesheets/page.css">
   <link rel="stylesheet" href="stylesheets/events.css">
+  <script src="scripts/events.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -76,7 +78,7 @@
                   <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Date</th>
                 </tr>
               </thead>
-              <tbody class="mdc-data-table__content">
+              <tbody class="mdc-data-table__content" id="event_list_body">
                 <tr class="mdc-data-table__row">
                   <td class="mdc-data-table__cell">Think 2020</td>
                   <td class="mdc-data-table__cell">San Francisco</td>
@@ -115,7 +117,7 @@
                   <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Name</th>
                   <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Location</th>
                   <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Points</th>
-                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Comments</th>
+                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Description</th>
                 </tr>
               </thead>
               <tbody class="mdc-data-table__content">
@@ -141,7 +143,7 @@
             </table>
           </div>
           <div class="buttons-row">
-            <button class="mdc-button button-item">
+            <button class="mdc-button button-item" onClick="getEventsClient()">
               <div class="mdc-button__ripple"></div>
               <span class="mdc-button__label">Show All</span>
             </button>
@@ -160,7 +162,8 @@
   </div>
 </body>
 </html>
+
+
 <script src="scripts/clientHelper.js"></script>
-<script src="scripts/events.js"></script>
 <!-- <script src="scripts/cloudantClient.js"></script>
 <script src="scripts/addStock.js"></script> -->
