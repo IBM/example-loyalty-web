@@ -42,14 +42,18 @@ function addToListOfEvents(event) {
   eventPoints.className = "mdc-data-table__cell mdc-data-table__cell--numeric";
   eventPoints.innerHTML = event.pointValue;
 
+  let eventDate = document.createElement('td');
+  eventDate.className = "mdc-data-table__cell";
+  eventDate.innerHTML = event.eventStartDate;
+  
   let eventDesc = document.createElement('td');
   eventDesc.className = "mdc-data-table__cell";
   eventDesc.innerHTML = event.eventDescription;
   
-
   eventRow.appendChild(eventName);
   eventRow.appendChild(eventLoc);
   eventRow.appendChild(eventPoints);
+  eventRow.appendChild(eventDate);
   eventRow.appendChild(eventDesc);
 
   listBody.appendChild(eventRow);
